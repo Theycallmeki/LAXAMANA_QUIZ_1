@@ -2,15 +2,6 @@ from django.db import models
 from django.contrib.auth.models import User
 import os
 import random
-# Create your models here.
-
-# Blank: Empty or without content. Null: Absence of a value. MENAING NOT REQ
-#TextField: Multiline text input. 
-#CharField: Single-line text input, character limit.
-# For this ginamit ang int for stock or rating, basically taga bilang
-# Autofield = Automatically generated unique identifier field in databases.
-# NOT CASCADE KASE WE WANT TO MAKE THE USER REVIEWS STAY, set null para mawala or mag blank nalng
-# OnetoONefield Connects two models with unique relation.
 
 class Product(models.Model):
     user = models.ForeignKey(User, on_delete = models.SET_NULL, null=True)
